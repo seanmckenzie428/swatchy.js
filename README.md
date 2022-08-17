@@ -6,6 +6,8 @@ Swatchy.js is a simple color swatch selector written in pure, vanilla javascript
 
 [Live Demo](https://seanmckenzie428.github.io/swatchy.js/demo.html)
 
+[Multiple Swatchies](https://seanmckenzie428.github.io/swatchy.js/two-swatchies.html)
+
 ## Installation
 
 Simply include the js and css files in your html head. You can also download swatchy.js and swatchy.css if you want to include them locally
@@ -43,6 +45,18 @@ Then in your javascript, after the page has loaded, simply call the function.
 ```
 
 It's that simple!
+
+## Multiple Swatchys (Swatchies?)
+
+For more than one swatchy on a page you need to call Swatchy with an id starting from 0 for each one on the page
+
+```html
+<script>
+    Swatchy(0);
+    Swatchy(1);
+</script>
+```
+
 
 ## Styling
 
