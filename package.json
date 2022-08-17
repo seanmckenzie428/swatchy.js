@@ -11,8 +11,8 @@
     "url": "git+https://github.com/seanmckenzie428/swatchy.js.git"
   },
   "keywords": [
-    "color",
     "swatch",
+    "color",
     "picker",
     "js",
     "javascript"

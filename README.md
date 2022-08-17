@@ -15,8 +15,8 @@ Simply include the js and css files in your html head. You can also download swa
 ### CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/swatchy.js@1.2.1/swatchy.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swatchy.js@1.2.1/swatchy.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swatchy.js@1.2.2/swatchy.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swatchy.js@1.2.2/swatchy.min.css">
 ```
 
 ## Usage
