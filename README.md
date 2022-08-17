@@ -1,4 +1,4 @@
-# Swatchy.js
+# Swatchy
 
 Swatchy.js is a simple color swatch selector written in pure, vanilla javascript. 
 
@@ -31,3 +31,7 @@ Then in your javascript, after the page has loaded, simply call the function.
 ```
 
 It's that simple!
+
+## Demo
+
+[Live Demo](/demo.html)
