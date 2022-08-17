@@ -1,4 +1,4 @@
-function Swatchy() {
+function Swatchy(id = 0) {
 
     let output
     let container
@@ -25,8 +25,10 @@ function Swatchy() {
     ]
 
     // swatches = props?.swatches ?? this.swatches
-    document.querySelector('.swatchy-trigger').addEventListener('click', togglePopup)
-    output = document.querySelector('.swatchy-output')
+
+    document.querySelectorAll('.swatchy-trigger').item(id)
+    document.querySelectorAll('.swatchy-trigger').item(id).addEventListener('click', togglePopup)
+    output = document.querySelectorAll('.swatchy-output').item(id)
 
     // create popup element
     container = document.createElement("div")
@@ -56,7 +58,7 @@ function Swatchy() {
     }
 
     function selectColor(e) {
-        let input = document.querySelector('.swatchy-output')
+        let input = document.querySelectorAll('.swatchy-output').item(id)
         let newColor = e.target.getAttribute('data-swatchy-color')
         input.setAttribute('value', newColor)
         input.setAttribute('data-swatchy-color', newColor)
@@ -65,7 +67,7 @@ function Swatchy() {
     }
 
     function togglePopup() {
-        let el = document.querySelector('.swatchy-element')
+        let el = document.querySelectorAll('.swatchy-element').item(id)
 
         let display = (window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle).display
         if ('none' === display) {
