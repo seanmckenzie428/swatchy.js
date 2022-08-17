@@ -1,6 +1,6 @@
 {
   "name": "swatchy.js",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Swatchy.js is a simple color swatch selector written in pure, vanilla javascript.",
   "main": "swatchy.js",
   "scripts": {
