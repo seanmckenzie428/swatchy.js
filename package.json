@@ -1,6 +1,26 @@
 {
-  "name": "swatchy",
-  "version": "1.0.0",
-  "dependencies": {
-  }
+  "name": "swatchy.js",
+  "version": "1.2.1",
+  "description": "Swatchy.js is a simple color swatch selector written in pure, vanilla javascript.",
+  "main": "swatchy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanmckenzie428/swatchy.js.git"
+  },
+  "keywords": [
+    "color",
+    "swatch",
+    "picker",
+    "js",
+    "javascript"
+  ],
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/seanmckenzie428/swatchy.js/issues"
+  },
+  "homepage": "https://seanmckenzie428.github.io/swatchy.js/"
 }
