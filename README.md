@@ -35,3 +35,13 @@ It's that simple!
 ## Demo
 
 [Live Demo](https://seanmckenzie428.github.io/swatchy.js/demo.html)
+
+
+## Styling
+
+If you want to use the same styling as the demo use these elements in your code.
+
+```html
+<button class="swatchy-button swatchy-trigger"><span class="swatchy-button-top">Select a Color</span></button>
+<input type="text" class="swatchy-output swatchy-display" disabled>
+```
