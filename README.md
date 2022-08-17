@@ -2,13 +2,25 @@
 
 Swatchy.js is a simple color swatch selector written in pure, vanilla javascript. 
 
+## Demo
+
+[Live Demo](https://seanmckenzie428.github.io/swatchy.js/demo.html)
+
 ## Installation
 
-Simply include the js and css files in your html head.
+Simply include the js and css files in your html head. You can also download swatchy.js and swatchy.css if you want to include them locally
+
+### CDN
 
 ```html
-    <script src="swatchy.js"></script>
-    <link rel="stylesheet" href="swatchy.css">
+<script src="https://cdn.jsdelivr.net/gh/seanmckenzie428/swatchy.js/swatchy.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/seanmckenzie428/swatchy.js/swatchy.min.css">
+```
+### Local
+
+```html
+<script src="swatchy.js"></script>
+<link rel="stylesheet" href="swatchy.css">
 ```
 
 ## Usage
@@ -31,11 +43,6 @@ Then in your javascript, after the page has loaded, simply call the function.
 ```
 
 It's that simple!
-
-## Demo
-
-[Live Demo](https://seanmckenzie428.github.io/swatchy.js/demo.html)
-
 
 ## Styling
 
