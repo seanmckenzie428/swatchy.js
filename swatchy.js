@@ -1,7 +1,6 @@
 function Swatchy() {
 
-    let trigger
-    let input
+    let output
     let container
     let swatches = [
         "#B71C1C", "#D32F2F", "#F44336", "#E57373", "#FFCDD2",
@@ -25,46 +24,39 @@ function Swatchy() {
         "#000000", "#525252", "#969696", "#D9D9D9", "#FFFFFF",
     ]
 
-
     // swatches = props?.swatches ?? this.swatches
-    trigger = document.querySelector('.swatchy-trigger')
-    input = document.querySelector('.swatchy-display')
-    createPopup()
-    addSwatches()
-    trigger.addEventListener('click', togglePopup)
+    document.querySelector('.swatchy-trigger').addEventListener('click', togglePopup)
+    output = document.querySelector('.swatchy-output')
 
-    function createPopup() {
-        container = document.createElement("div")
-        container.classList.add('swatchy-element')
-        container.setAttribute('style', 'display: none;')
-        input.after(container)
-    }
+    // create popup element
+    container = document.createElement("div")
+    container.classList.add('swatchy-element')
+    container.setAttribute('style', 'display: none;')
+    output.after(container)
 
-    function addSwatches() {
-        let swatchContainer = document.createElement('div')
-        swatchContainer.classList.add('swatchy-swatches')
-        container.appendChild(swatchContainer)
+    // add swatches to popup
+    let swatchContainer = document.createElement('div')
+    swatchContainer.classList.add('swatchy-swatches')
+    container.appendChild(swatchContainer)
 
-        let swatchCount = -1;
-        for (const swatch of swatches) {
-            swatchCount++;
-            if ( (swatchCount % 5 === 0) && ( swatchCount % 10 !== 0 )) {
-                let gap = document.createElement('div')
-                swatchContainer.appendChild(gap)
-            }
-            let colorButton = document.createElement('div')
-            colorButton.setAttribute('data-swatchy-color', swatch)
-            colorButton.style.backgroundColor = swatch
-            colorButton.classList.add('swatchy-color-button')
-            colorButton.addEventListener('click', selectColor)
-            swatchContainer.appendChild(colorButton)
-
+    let swatchCount = -1;
+    for (const swatch of swatches) {
+        swatchCount++;
+        if ( (swatchCount % 5 === 0) && ( swatchCount % 10 !== 0 )) {
+            let gap = document.createElement('div')
+            swatchContainer.appendChild(gap)
         }
+        let colorButton = document.createElement('div')
+        colorButton.setAttribute('data-swatchy-color', swatch)
+        colorButton.style.backgroundColor = swatch
+        colorButton.classList.add('swatchy-color-button')
+        colorButton.addEventListener('click', selectColor)
+        swatchContainer.appendChild(colorButton)
 
     }
 
     function selectColor(e) {
-        let input = document.querySelector('.swatchy-display')
+        let input = document.querySelector('.swatchy-output')
         let newColor = e.target.getAttribute('data-swatchy-color')
         input.setAttribute('value', newColor)
         input.setAttribute('data-swatchy-color', newColor)
@@ -74,11 +66,10 @@ function Swatchy() {
 
     function togglePopup() {
         let el = document.querySelector('.swatchy-element')
-        let displayValue = 'block'
 
         let display = (window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle).display
         if ('none' === display) {
-            el.style.display = displayValue
+            el.style.display = 'block'
         } else {
             el.style.display = 'none'
         }
