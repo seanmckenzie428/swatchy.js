@@ -34,4 +34,4 @@ It's that simple!
 
 ## Demo
 
-[Live Demo](/demo.html)
+[Live Demo](https://seanmckenzie428.github.io/swatchy.js/demo.html)
