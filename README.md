@@ -15,15 +15,15 @@ Simply include the js and css files in your html head. You can also download swa
 ### CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/swatchy.js@1.2.2/swatchy.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swatchy.js@1.2.2/swatchy.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swatchy.js@1.2.3/swatchy.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swatchy.js@1.2.3/swatchy.min.css">
 ```
 
 ## Usage
 
 You'll need 2 elements on your page to use swatchy. One to trigger the popup and another to hold the color output.
 
-Add the class "swatchy-trigger" to the element you want as your trigger and "swatchy-output" to your output element.
+Add the class `swatchy-trigger` to the element you want as your trigger and `swatchy-output` to your output element.
 
 ```html
 <button class="swatchy-trigger">Select a Color</button>
@@ -32,29 +32,19 @@ Add the class "swatchy-trigger" to the element you want as your trigger and "swa
 
 Then in your javascript, after the page has loaded, simply call the function.
 
-```html
-<script>
-    Swatchy();
-</script>
+```javascript
+Swatchy();
 ```
 
 It's that simple!
 
 ## Multiple Swatchys (Swatchies?)
 
-For more than one swatchy on a page you need to call Swatchy with an id starting from 0 for each one on the page
-
-```html
-<script>
-    Swatchy(0);
-    Swatchy(1);
-</script>
-```
-
+For more than one swatchy on a page just add more trigger and output elements. You only need to call `Swatchy()` once per page.
 
 ## Styling
 
-If you want to use the same styling as the demo use these elements in your code.
+If you want to use the same styling as the demo page use the `swatchy-button`, `swatchy-button-top`, and `swatchy-display` classes on your elements.
 
 ```html
 <button class="swatchy-button swatchy-trigger"><span class="swatchy-button-top">Select a Color</span></button>
