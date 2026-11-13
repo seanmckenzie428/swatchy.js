@@ -42,8 +42,8 @@ function Swatchy(
 
             // swatches = props?.swatches ?? this.swatches
 
-            document.querySelectorAll('.swatchy-trigger').item(id)
-            document.querySelectorAll('.swatchy-trigger').item(id).addEventListener('click', togglePopup)
+            const trigger = swatchyCount.item(id)
+            trigger.addEventListener('click', togglePopup)
             output = document.querySelectorAll('.swatchy-output').item(id)
 
             // create popup element
@@ -74,6 +74,8 @@ function Swatchy(
             }
 
             function selectColor(e) {
+                if (trigger.matches(':disabled')) return
+
                 let input = document.querySelectorAll('.swatchy-output').item(id)
                 let newColor = e.target.getAttribute('data-swatchy-color')
                 input.setAttribute('value', newColor)
